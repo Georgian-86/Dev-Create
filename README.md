@@ -1,6 +1,3 @@
-# HealthChain: Decentralized Health Management System
-
-
 # Health Management System (Domain: HealthCare)
 
 ## 🔗 Live Demo
