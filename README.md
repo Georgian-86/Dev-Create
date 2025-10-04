@@ -6,7 +6,6 @@ Experience the application: [Health Management System]:  https://p2x5t-yqaaa-aaa
 
 
 <div align="center">
-  <img src="https://img.freepik.com/free-vector/health-medical-app-online-mobile-phone_23-2148636827.jpg" alt="Health Management System Logo" width="300"/>
   <p><em>A secure, intelligent platform for managing your healthcare records</em></p>
 </div>
 
