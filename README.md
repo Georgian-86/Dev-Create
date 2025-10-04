@@ -19,10 +19,7 @@ Experience the application: [Health Management System]:  https://p2x5t-yqaaa-aaa
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Development](#development)
-- [Deployment](#deployment)
 - [User Guide](#user-guide)
-- [Architecture](#architecture)
 - [Acknowledgments](#acknowledgments)
 
 - ## Team Information
@@ -180,13 +177,6 @@ The backend code is located in the `src/healthchain_backend` directory.
 2. Enter your symptoms and health information
 3. Review the AI-generated predictions
 4. Share results with your healthcare provider if needed
-
-### Sharing Records
-
-1. Navigate to the record you want to share
-2. Click "Share Record"
-3. Enter the recipient's details or select from your healthcare providers
-4. Set permissions and expiration date
 
 ## 🙏 Acknowledgments
 
