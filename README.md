@@ -1,3 +1,6 @@
+# HealthChain: Decentralized Health Management System
+
+
 # Health Management System (Domain: HealthCare)
 
 ## 🔗 Live Demo
@@ -25,6 +28,27 @@ Experience the application: [Health Management System]:  https://p2x5t-yqaaa-aaa
 - [User Guide](#user-guide)
 - [Architecture](#architecture)
 - [Acknowledgments](#acknowledgments)
+
+- ## Team Information
+- **Team Name**: NOOB HACKERS
+- **Team ID**: T-138
+- **University**: Lovely Professional University
+
+## Team Members
+- [Golu Kumar] - [Backend Developer] 
+- [Medha Jha] - [AI Specialist] 
+- [Ajay Gangwar] - [Role] (e.g., Blockchain Developer)
+- [Sarwajeet Singh] - [Role] (e.g., UI/UX Designer)
+
+## Problem Statement - Open Innovation
+In traditional healthcare systems, patient records are:
+1. Scattered across multiple providers (hospitals, clinics, labs)
+2. Stored in centralized databases, making them vulnerable to data breaches
+3. Prone to tampering, loss, and lack of proper traceability
+4. Difficult to access across institutions, especially during emergencies
+5. Not fully owned or controlled by patients
+
+These challenges create barriers in delivering timely, coordinated, and patient-centric care.
 
 ## 🌟 Problem Statement
 In traditional healthcare systems, patient records are often:
@@ -102,31 +126,6 @@ Before you begin, ensure you have installed:
 - [Rust](https://www.rust-lang.org/tools/install) (for backend development)
 - [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) (Rust package manager)
 
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/Health-Management.git
-   cd Health-Management
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the local Internet Computer replica**:
-   ```bash
-   dfx start --background
-   ```
-
-4. **Deploy the canisters to the local replica**:
-   ```bash
-   dfx deploy
-   ```
-
-5. **Open the application**:
-   Once deployed, the terminal will display a URL (typically http://localhost:4943?canisterId=...). Open this URL in your browser.
 
 ## 💻 Development
 
@@ -163,38 +162,6 @@ The backend code is located in the `src/healthchain_backend` directory.
    dfx deploy healthchain_backend
    ```
 
-### Key Files and Directories
-
-- `src/Health-Management-frontend/src/component/` - React components
-- `src/Health-Management-frontend/src/App.tsx` - Main application component
-- `src/healthchain_backend/src/lib.rs` - Rust canister implementation
-- `dfx.json` - Project configuration for Internet Computer
-
-## 📤 Deployment
-
-### Local Deployment
-
-To deploy the application to the local replica:
-
-```bash
-dfx deploy
-```
-
-### Internet Computer Mainnet Deployment
-
-1. **Create a cycles wallet** if you don't have one:
-   ```bash
-   dfx identity --network ic new-wallet
-   ```
-
-2. **Ensure you have sufficient cycles** in your wallet.
-
-3. **Deploy to the Internet Computer mainnet**:
-   ```bash
-   dfx deploy --network ic
-   ```
-
-4. **Access your deployed application** at the URL provided in the deployment output.
 
 ## 📖 User Guide
 
@@ -225,47 +192,6 @@ dfx deploy
 3. Enter the recipient's details or select from your healthcare providers
 4. Set permissions and expiration date
 
-## 🏗️ Architecture
-
-The Health Management System follows a client-server architecture built on the Internet Computer:
-
-- **Frontend**: React application that provides the user interface
-- **Backend**: Rust canisters that handle data storage, retrieval, and business logic
-- **Authentication**: Internet Identity for secure, anonymous authentication
-- **Storage**: Internet Computer canisters for immutable, secure data storage
-
-### Data Flow
-
-1. User authenticates via Internet Identity
-2. Frontend communicates with backend canisters via Candid interface
-3. Backend stores and retrieves data from canisters
-4. Updates are propagated to the frontend in real-time
-
-#### Security Policy Warnings
-
-If you see warnings about security policies, create a `.ic-assets.json5` file in the project root:
-
-```json
-[
-  {
-    "match": "**/*",
-    "security_policy": "standard"
-  }
-]
-```
-
-## 👥 Contributing
-
-We welcome contributions to the Health Management System! Here's how you can help:
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Commit your changes**: `git commit -m 'Add some amazing feature'`
-4. **Push to the branch**: `git push origin feature/amazing-feature`
-5. **Open a Pull Request**
-
-Please ensure your code follows our coding standards and includes appropriate tests.
-
 ## 🙏 Acknowledgments
 
 - [DFINITY Foundation](https://dfinity.org/) for the Internet Computer platform
@@ -292,38 +218,3 @@ To learn more before you start working with `Health-Management`, see the followi
 - [ic-cdk](https://docs.rs/ic-cdk)
 - [ic-cdk-macros](https://docs.rs/ic-cdk-macros)
 - [Candid Introduction](https://internetcomputer.org/docs/current/developer-docs/backend/candid/)
-
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd Health-Management/
-dfx help
-dfx canister --help
-```
-
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
-
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
