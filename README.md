@@ -34,9 +34,9 @@ Experience the application: [Health Management System]:  https://p2x5t-yqaaa-aaa
 ## Team Members
 - [Golu Kumar] - [Backend Developer] 
 - [Medha Jha] - [AI Specialist] 
-- [Ajay Gangwar] - [Role] (e.g., Blockchain Developer)
-- [Sarwajeet Singh] - [Role] (e.g., UI/UX Designer)
-
+- [Ajay Gangwar] - [Blockchain Developer] 
+- [Sarwajeet Singh] - [UI/UX Designer]
+  
 ## Problem Statement - Open Innovation
 In traditional healthcare systems, patient records are:
 1. Scattered across multiple providers (hospitals, clinics, labs)
